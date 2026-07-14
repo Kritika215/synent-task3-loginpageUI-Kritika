@@ -6,14 +6,12 @@ const toggle=document.getElementById("togglePassword");
 const bar=document.getElementById("strengthBar");
 const remember=document.getElementById("remember");
 
-// Remember Me
 
 if(localStorage.getItem("email")){
 email.value=localStorage.getItem("email");
 remember.checked=true;
 }
 
-// Show Password
 
 toggle.onclick=()=>{
 
@@ -25,10 +23,7 @@ else{
 password.type="password";
 toggle.classList.replace("fa-eye-slash","fa-eye");
 }
-
 }
-
-// Password Strength
 
 password.addEventListener("input",()=>{
 
@@ -48,8 +43,6 @@ bar.style.background="lime";
 }
 
 });
-
-// Login
 
 loginBtn.onclick=()=>{
 
@@ -90,10 +83,7 @@ message.style.color="#7CFC00";
 document.querySelector(".login-box").classList.add("success");
 
 },2000);
-
 }
-
-// Enter Key
 
 document.addEventListener("keypress",(e)=>{
 
